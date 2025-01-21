@@ -16,7 +16,7 @@ def get_prediction(image_data):
   url = 'https://askai.aiclub.world/b5de9e88-76d5-4515-8b72-dafd9fa0e2ff'
   r = requests.post(url, data=image_data)
   response = r.json()['predicted_label']
-  score = r.json()['score'][response]
+  score = r.json()['score']
   #print("Predicted_label: {} and confidence_score: {}".format(response,score))
   return response, score
 
